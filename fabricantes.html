@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Concessionaria - Fabricantes</title>
+</head>
+<body>
+    <div class="container-main">
+        <h1>Lista de fabricantes</h1>
+        <br>
+        <br>
+        <ul class="fabricantes-list" id="fabricantes-list">
+        </ul>
+        
+    </div>
+    <div class="buttons">
+        <button class="btn-add" type="button" onclick="abrirModal('adicionar')">Adicionar</button>
+    </div>
+
+    <div id="detalhes" class="backgound-modal">
+        <div class="modal" id="detalhes-fabricante">
+            <button type="button" onclick="fecharModal('detalhes')">X</button>
+            <div class="modal-content">
+                <div class="buttons">
+                    <button type="menu" class="btn">Veículos</button>
+                    <button type="menu" class="btn">Editar</button>
+                    <button  type="menu" class="btn excluir">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div id="adicionar" class="backgound-modal">
+        <div class="modal">
+            <button type="button" onclick="fecharModal('adicionar')">X</button>
+            <div class="modal-content">
+                <form  method="post" onsubmit="postFabricantes()">
+                    <div class="form-components">
+                        <label>Descrição fabricante</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="form-components">
+                        <button type="submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="loading-back" id="loading">
+        <h1>Loading...</h1>
+    </div>
+<script src="./js/script.js"></script>
+</body>
+</html>
